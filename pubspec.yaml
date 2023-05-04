@@ -1,5 +1,5 @@
 name: decentralised_medical_records
-description: A new Flutter project.
+description: Project submission for the Amrita BlockCamp 2023 hackathon
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -30,6 +30,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  web3dart: ^2.6.1
+  material3_layout: ^0.0.7
+  get :
+  
 
 
   # The following adds the Cupertino Icons font to your application.
