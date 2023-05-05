@@ -1,9 +1,17 @@
-import 'package:decentralised_medical_records/credential_check.dart';
-import 'package:decentralised_medical_records/screen_widget.dart';
+import 'package:decentralised_medical_records/auth/auth_page.dart';
+import 'package:decentralised_medical_records/auth/credential_check.dart';
+import 'package:decentralised_medical_records/auth/login_handler.dart';
+import 'package:decentralised_medical_records/firebase_options.dart';
+import 'package:decentralised_medical_records/pages/screen_widget.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -21,7 +29,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true, // HERE!
       ),
       themeMode: ThemeMode.dark,
-      home: const CredentialLogin(),
+      home: LoginHandler(),
     );
   }
 }

@@ -200,25 +200,25 @@ contract Patient is Professional,Pharm{
         return(m_name,Reason,IPFS);
     }
 
-    function getMedicineFromPatients(address med)public view returns(address[] memory medPatients){
-        require(isPharm[msg.sender],"Not a Pharmaceutical institution");
-        return medicines[med];
-    }
+    // function getMedicineFromPatients(address med)public view returns(address[] memory medPatients){
+    //     require(isPharm[msg.sender],"Not a Pharmaceutical institution");
+    //     return medicines[med];
+    // }
 
-    function getRecordsfromType(string memory reg,address _addr)public view returns(Records[] memory rec){
-        require(isPharm[msg.sender],"Not a Pharmaceutical institution");
-        require(isAuth[msg.sender][_addr],"Not Authorised");
-        return med_data[reg];
-    }
-    function getAllRecordsfromType(string memory reg)public view returns(Records[][] memory rec){
-        require(isPharm[msg.sender],"Not a Pharmaceutical institution");
-        Records[][] memory recs;
-        uint ctr=0;
-        for(uint i=0;i<patientList.length;i++){
-            recs[ctr++]=getRecordsfromType(reg, patientList[i]);
-        }
-        return recs;
-    }
+    // function getRecordsfromType(string memory reg,address _addr)public view returns(Records[] memory rec){
+    //     require(isPharm[msg.sender],"Not a Pharmaceutical institution");
+    //     require(isAuth[msg.sender][_addr],"Not Authorised");
+    //     return med_data[reg];
+    // }
+    // function getAllRecordsfromType(string memory reg)public view returns(Records[][] memory rec){
+    //     require(isPharm[msg.sender],"Not a Pharmaceutical institution");
+    //     Records[][] memory recs;
+    //     uint ctr=0;
+    //     for(uint i=0;i<patientList.length;i++){
+    //         recs[ctr++]=getRecordsfromType(reg, patientList[i]);
+    //     }
+    //     return recs;
+    // }
     function addAuth(address _addr) public returns(bool success) {
         require(!isAuth[msg.sender][_addr],"Already Authorised");
         require(msg.sender!=_addr,"Cant add yourself");

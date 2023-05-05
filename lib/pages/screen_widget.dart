@@ -1,5 +1,6 @@
-import 'package:decentralised_medical_records/credential_check.dart';
-import 'package:decentralised_medical_records/records.dart';
+import 'package:decentralised_medical_records/auth/credential_check.dart';
+import 'package:decentralised_medical_records/pages/home_page.dart';
+import 'package:decentralised_medical_records/pages/records_page.dart';
 import 'package:flutter/material.dart';
 import 'package:material3_layout/material3_layout.dart';
 
@@ -17,7 +18,7 @@ class _ScreenWidgetState extends State<ScreenWidget> {
       theme: Theme.of(context),
       navigationType: NavigationTypeEnum.railAndBottomNavBar,
       navigationSettings: RailAndBottomSettings(
-        pages: <Widget>[CredentialLogin(),RecordsPage(),Placeholder()],
+        pages: <Widget>[HomePage(),RecordsPage(),Placeholder()],
         destinations: [
           DestinationModel(
             label: 'Home',

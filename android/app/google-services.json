@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "405604947727",
+    "project_id": "demed-d90d6",
+    "storage_bucket": "demed-d90d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405604947727:android:60bbe0a79b4d411dab507a",
+        "android_client_info": {
+          "package_name": "com.example.decentralised_medical_records"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "405604947727-5arbl7iiircjvkuq4qd1je1k8qgfdvd8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD41LJCGXBjLKCLwK3vMW4nGpC21fGv9es"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "405604947727-5arbl7iiircjvkuq4qd1je1k8qgfdvd8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "405604947727-bs39ugub67gugdlstl4pfpg7emtqd8ds.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.decentralisedMedicalRecords"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
