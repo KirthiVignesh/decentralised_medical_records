@@ -1,3 +1,5 @@
+import 'package:decentralised_medical_records/credential_check.dart';
+import 'package:decentralised_medical_records/records.dart';
 import 'package:flutter/material.dart';
 import 'package:material3_layout/material3_layout.dart';
 
@@ -15,7 +17,7 @@ class _ScreenWidgetState extends State<ScreenWidget> {
       theme: Theme.of(context),
       navigationType: NavigationTypeEnum.railAndBottomNavBar,
       navigationSettings: RailAndBottomSettings(
-        pages: <Widget>[],
+        pages: <Widget>[CredentialLogin(),RecordsPage(),Placeholder()],
         destinations: [
           DestinationModel(
             label: 'Home',
@@ -25,18 +27,15 @@ class _ScreenWidgetState extends State<ScreenWidget> {
           ),
           DestinationModel(
             label: 'Records',
-            icon: const Icon(Icons.group_outlined),
-            selectedIcon: const Icon(Icons.group),
+            icon: const Icon(Icons.note_alt_outlined),
+            selectedIcon: const Icon(Icons.note_alt_rounded),
             tooltip: 'Add Records',
           ),
           DestinationModel(
-            label: 'Ambulance',
-            badge: Badge.count(
-              count: 125,
-              child: const Icon(Icons.message_outlined),
-            ),
+            label: 'Settings',
+            icon: const Icon(Icons.message_outlined),
             selectedIcon: const Icon(Icons.message),
-            tooltip: 'Ambulance',
+            tooltip: 'Settings',
           ),
         ],
         showMenuIcon: false,

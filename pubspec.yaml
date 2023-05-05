@@ -33,13 +33,14 @@ dependencies:
   web3dart: ^2.6.1
   material3_layout: ^0.0.7
   get :
+  # polygonid_flutter_sdk:
+  file_picker: ^5.2.11
+  path_provider:
   
 
 
   # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
-  flutter_secure_storage: ^8.0.0
+  # Use with the CupertinoIcons class for iO
 
 dev_dependencies:
   flutter_test:

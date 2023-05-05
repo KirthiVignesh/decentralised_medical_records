@@ -1,3 +1,4 @@
+import 'package:decentralised_medical_records/credential_check.dart';
 import 'package:decentralised_medical_records/screen_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true, // HERE!
       ),
       themeMode: ThemeMode.dark,
-      home: const ScreenWidget(),
+      home: const CredentialLogin(),
     );
   }
 }
