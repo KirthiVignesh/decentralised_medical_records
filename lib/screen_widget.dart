@@ -11,11 +11,39 @@ class ScreenWidget extends StatefulWidget {
 class _ScreenWidgetState extends State<ScreenWidget> {
   @override
   Widget build(BuildContext context) {
-      return NavigationScaffold(
+    return NavigationScaffold(
       theme: Theme.of(context),
       navigationType: NavigationTypeEnum.railAndBottomNavBar,
-      navigationSettings: ,
-      onDestinationSelected: (int index) => ,
-    );;
+      navigationSettings: RailAndBottomSettings(
+        pages: <Widget>[],
+        destinations: [
+          DestinationModel(
+            label: 'Home',
+            icon: const Icon(Icons.home_outlined),
+            selectedIcon: const Icon(Icons.home_filled),
+            tooltip: 'Home page',
+          ),
+          DestinationModel(
+            label: 'Records',
+            icon: const Icon(Icons.group_outlined),
+            selectedIcon: const Icon(Icons.group),
+            tooltip: 'Add Records',
+          ),
+          DestinationModel(
+            label: 'Ambulance',
+            badge: Badge.count(
+              count: 125,
+              child: const Icon(Icons.message_outlined),
+            ),
+            selectedIcon: const Icon(Icons.message),
+            tooltip: 'Ambulance',
+          ),
+        ],
+        showMenuIcon: false,
+        groupAlignment: -1.0,
+        labelType: NavigationRailLabelType.all,
+      ),
+    );
+    ;
   }
 }
